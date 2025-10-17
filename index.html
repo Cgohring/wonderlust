@@ -282,14 +282,15 @@
     <footer>
         <section id="contact-us">
             <h2>Contact Us <span id="required">(*required)</span></h2>
-            <form method="post" action="https://wp.zybooks.com/form-viewer.phpLinks" name="contactform" autocomplete="off">
+            <form method="post" action="https://wp.zybooks.com/form-viewer.php" name="contactform" autocomplete="on">
                 <div>
                     <label for="first-name">First Name<span class="required">*</span></label>
                     <input
                         id="first-name"
                         name="first-name"
                         type="text"
-                        pattern="^([\D]{2,30}\s+)+([a-zA-Z]{2,30})$"
+                        pattern="[A-Za-z]{1,30}"
+                        autocomplete="given-name"
                         required
                     >
                 </div>
@@ -299,7 +300,8 @@
                         id="last-name"
                         name="last-name"
                         type="text"
-                        pattern="^([\D]{2,30}\s+)+([a-zA-Z]{2,30})$"
+                        pattern="[A-Za-z]{1,30}"
+                        autocomplete="family-name"
                         required
                     >
                 </div>
@@ -309,6 +311,7 @@
                         id="email"
                         name="email"
                         type="email"
+                        autocomplete="email"
                         required
                     >
                 </div>
@@ -318,6 +321,7 @@
                         id="phone"
                         name="phone"
                         type="tel"
+                        autocomplete="tel"
                         required
                     >
                 </div>
@@ -354,36 +358,40 @@
                     </div>
                 </fieldset>
                 <fieldset id="destination">
-                    <legend>Destination<span>*</span></legend>
-                    <select id="select-destination">
-                        <option>Choose</option>
-                        <option>Barcelona</option>
-                        <option>Granada</option>
-                        <option>Ibiza</option>
-                        <option>Madrid</option>
-                        <option>Majorca</option>
-                        <option>Seville</option>
-                        <option>Tenerife</option>
-                        <option>Valencia</option>
-                        <option>Other</option>
+                    <legend>Destination<span class="required">*</span></legend>
+                    <select id="select-destination" name="select-destination" required>
+                        <option value="" disabled selected>Choose</option>
+                        <option value="barcelona">Barcelona</option>
+                        <option value="granada">Granada</option>
+                        <option value="ibiza">Ibiza</option>
+                        <option value="madrid">Madrid</option>
+                        <option value="majorca">Majorca</option>
+                        <option value="seville">Seville</option>
+                        <option value="tenerife">Tenerife</option>
+                        <option value="valencia">Valencia</option>
+                        <option value="other">Other</option>
                     </select>
                 </fieldset>
                 <fieldset id="travelTime">
-                    <legend>Travel Time<span>*</span></legend>
-                    <select id="select-travel-time">
-                        <option>Choose</option>
-                        <option>Fall</option>
-                        <option>Winter</option>
-                        <option>Spring</option>
-                        <option>Summer</option>
-                        <option>Flexible</option>
+                    <legend>Travel Time<span class="required">*</span></legend>
+                    <select id="select-travel-time" name="select-travel-time" required> 
+                        <option value="" disabled selected>Choose</option>
+                        <option value="fall">Fall</option>
+                        <option value="winter">Winter</option>
+                        <option value="spring">Spring</option>
+                        <option value="summer">Summer</option>
+                        <option value="flexible">Flexible</option>
                     </select>
                 </fieldset>
-                <input>
+                <input
+                    type="submit"
+                    id="submit"
+                    value="Submit"
+                >
             </form>
         </section>
         <section id="legal">
-            Legal
+            <h3>Legal</h3>
             <small>Copyright 2021 Wonderlust</small>
             <a href="#">Privacy Statement</a>
             <a href="#">Terms of Service</a>
