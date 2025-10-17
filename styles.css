@@ -263,6 +263,7 @@ label, input, legend, select {
     width: 95%;
     padding: .5rem;
 }
+/*This will be the CSS for skip-links later*/
 .sr-only {
     background: var(--sunset-orange);
     height: 1rem;
@@ -305,6 +306,7 @@ input[type="radio"] {
     display: grid;
     place-content: center;
 }
+/*spacing for form, make sure to add in*/
 .form-control {
     font-family: system-ui, sans-serif;
     font-size: 2rem;
