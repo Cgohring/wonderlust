@@ -263,7 +263,6 @@ label, input, legend, select {
     width: 95%;
     padding: .5rem;
 }
-/*This will be the CSS for skip-links later*/
 .sr-only {
     background: var(--sunset-orange);
     height: 1rem;
