@@ -305,7 +305,7 @@ input[type="radio"] {
     display: grid;
     place-content: center;
 }
-/*spacing for form, make sure to add in*/
+/*styling for form, make sure to add in*/
 .form-control {
     font-family: system-ui, sans-serif;
     font-size: 2rem;
